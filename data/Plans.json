@@ -1,0 +1,12 @@
+{
+    "plans": [
+        "Corporate Box",
+        "Home Box",
+        "Individual Box"
+    ],
+    "description": [
+        "Corporate Box Description",
+        "Home Box Description",
+        "Individual box Description"
+    ]
+}

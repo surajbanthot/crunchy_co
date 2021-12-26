@@ -1,0 +1,9 @@
+{
+    "card_details": {
+        "user_id": "",
+        "card_type": "",
+        "card_number": "",
+        "Validity": "",
+        "CVV": ""
+    }
+}
