@@ -11,10 +11,11 @@ const Coupon = () => {
             console.log(data);
             setcoupon(data);
         },[])
-    return ( <div>
+    return ( <>
             {coupon} 
-            </div>
+            </>
 );
 
     }
+
 export default Coupon

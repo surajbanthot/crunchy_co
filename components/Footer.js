@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="w-full h-20 static bottom-0">
       <footer className="">
-        <div className="grid grid-cols-3 text-gray-500 font-semibold">
+        <div className="grid grid-cols-3 text-gray-500 font-semibold p-5">
           <div>
             <ul className="space-y-1">
               <li>About Us</li>
