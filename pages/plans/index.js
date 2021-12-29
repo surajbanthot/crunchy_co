@@ -20,27 +20,31 @@ const Plans = () => {
           <div>Individual</div>
         </div>
       </div>
-      <div className="flex space-x-40 pt-10 pb-16">
-        <div className="text-sm w-44 h-44 border-solid border-2 rounded-md">
-          In nostrud voluptate in elit id nisi irure. Laboris excepteur amet in
-          amet ut proident duis aliqua ipsum. Incididunt culpa anim duis elit
-          amet occaecat excepteur enim excepteur nulla.
+      <div className="flex flex-row justify-center items-center columns-3">
+        <div>
+          <div className="">
+            In nostrud voluptate in elit id nisi irure. Laboris excepteur amet
+            in amet ut proident duis aliqua ipsum. Incididunt culpa anim duis
+            elit amet occaecat excepteur enim excepteur nulla.
+          </div>
+          <button className="">Get the Box</button>
         </div>
-        <div className="text-sm w-44 h-44  border-solid border-2 rounded-md">
-          In nostrud voluptate in elit id nisi irure. Laboris excepteur amet in
-          amet ut proident duis aliqua ipsum. Incididunt culpa anim duis elit
-          amet occaecat excepteur enim excepteur nulla.
+        <div>
+          <div className="">
+            In nostrud voluptate in elit id nisi irure. Laboris excepteur amet
+            in amet ut proident duis aliqua ipsum. Incididunt culpa anim duis
+            elit amet occaecat excepteur enim excepteur nulla.
+          </div>
+          <button className="">Get the Box</button>
         </div>
-        <div className="text-sm w-44 h-44 border-solid border-2 rounded-md">
-          In nostrud voluptate in elit id nisi irure. Laboris excepteur amet in
-          amet ut proident duis aliqua ipsum. Incididunt culpa anim duis elit
-          amet occaecat excepteur enim excepteur nulla.
+        <div>
+          <div className="">
+            In nostrud voluptate in elit id nisi irure. Laboris excepteur amet
+            in amet ut proident duis aliqua ipsum. Incididunt culpa anim duis
+            elit amet occaecat excepteur enim excepteur nulla.
+          </div>
+          <button className="">Get the Box</button>
         </div>
-      </div>
-      <div className="flex space-x-40 pt-2 pb-16">
-        <button className="bg-green-300 rounded-md p-4">Get the Box</button>
-        <button>Get the Box</button>
-        <button>Get the Box</button>
       </div>
     </main>
   );
