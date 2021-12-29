@@ -33,15 +33,15 @@ export default function Home() {
         </div>
         <div className="flex justify-between">
           <div className="m-10">
-            <img src="/shop.png" className="h-20 w-20" />
+            <img src="/shop.png" className="h-32 w-32" />
             <div>Shop</div>
           </div>
           <div className="m-10 px-16">
-            <img src="/shipped.png" className="h-20 w-20" />
+            <img src="/shipped.png" className="h-32 w-32" />
             <div>Ship</div>
           </div>
           <div className="m-10">
-            <img src="/snack.png" className="h-20 w-20" />
+            <img src="/snack.png" className="h-32 w-32" />
             <div>Snack</div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import useRouter from "next/router";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 function Header() {
@@ -9,19 +9,24 @@ function Header() {
       <ul className="flex justify-between">
         <div className="flex py-4 px-1">
           {!session && (
-            <li className="p-1">
-              <Link href="/api/auth/signin">
-                <a
-                  className="py-4 px-2 hover:text-green-400 transition duration-300 text-gray-500 font-semibold"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    signIn("github");
-                  }}
-                >
-                  SignIn | Github
-                </a>
-              </Link>
-            </li>
+            <>
+              <li className="p-1">
+                <Link href="/api/auth/signin">
+                  <a
+                    className="py-4 px-2 hover:text-green-400 transition duration-300 text-gray-500 font-semibold"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signIn("github");
+                    }}
+                  >
+                    SignIn | Github
+                  </a>
+                </Link>
+              </li>
+              <li className="p-1 text-gray-500 font-semibold hover:text-green-400 transition duration-300">
+                <div className="">SignUp</div>
+              </li>
+            </>
           )}
           {session && (
             <li className="p-1">
@@ -38,9 +43,7 @@ function Header() {
               </Link>
             </li>
           )}
-          <li className="p-1 text-gray-500 font-semibold hover:text-green-400 transition duration-300">
-            <div className="">SignUp</div>
-          </li>
+
           {/* <li>
           <Link href="/"></Link>
           <a>Crunchy_Co</a>
