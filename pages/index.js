@@ -9,7 +9,7 @@ export default function Home() {
         </div>
         <Link href="/plans">
           <a className="p-16">
-            <span className="border-2 p-5 rounded-md font-semibold border-zinc-700">
+            <span className="bg-green-300 p-5 rounded-lg font-semibold shadow-lg">
               SEE OUR PLANS
             </span>
           </a>
