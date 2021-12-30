@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col justify-center items-center text-center">
-        <div className="flex flex-col justify-center items-center pt-20 pb-10">
+        <div className="pt-20 pb-10">
           <img src="/granola.png" className="w-40 h-40" />
         </div>
         <Link href="/plans">

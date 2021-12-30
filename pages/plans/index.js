@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from 'next/link';
 const Plans = () => {
   return (
     <>
@@ -16,7 +16,9 @@ const Plans = () => {
               in amet ut proident duis aliqua ipsum. Incididunt culpa anim duis
               elit amet occaecat excepteur enim excepteur nulla.
             </div>
+            <Link  href="/Questionnaire">
             <button className="bg-green-300 border-1 p-4 rounded-xl shadow-lg">Get the Box</button>
+            </Link>
           </div>
           <div className="m-8">
             <img src="home.png" className="ml-28 w-40 h-40 pb-8" />

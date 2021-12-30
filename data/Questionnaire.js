@@ -1,5 +1,4 @@
-{
-    "questions": [
+export default Questionnaire  = [
         "Size of the Organization",
         "The budget allocated for snacks",
         "Ferquency of pruchase",
@@ -8,5 +7,4 @@
         "If they are already purchasing snacks elsewhere",
         "Where did they hear about us",
         "How soon do they want to get started"
-    ]
-}
+]
