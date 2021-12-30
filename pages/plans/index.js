@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Plans = () => {
   return (
     <>
-      <main className="flex flex-col justify-center text-center">
+      <main className="flex flex-col justify-center text-center items-center">
         <div className="font-bold text-4xl pt-16 pb-16">
           Choose Your Plan
         </div>

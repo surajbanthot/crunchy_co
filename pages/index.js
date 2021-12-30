@@ -25,7 +25,6 @@ export default function Home() {
         <a href="#Working" className="scroll-smooth">
           <img src="/arrow-pointer.png" className="h-20 w-20 mb-24" />
         </a>
-
         <div id="Working">
           <div className="font-bold text-3xl text-slate-600 pb-12">
             How it Works
