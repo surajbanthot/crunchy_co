@@ -1,16 +1,20 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const Questionnaire = () => {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState("");
+
+async () => {
+      const response = await fetch('/api/Questionnaire');
+      const data = await response.json();
+      
+  }
   return (
     <div className="flex flex-col text-center items-center">
       <div className="font-bold mt-12 p-4 text-3xl">
         Help us know you Better
       </div>
-      <div className="p-4 font-semibold text-2xl m-8 ">
-        1. How big is your Organization?
-      </div>
-      <div>
+      <div className="p-4 font-semibold text-2xl m-8 "></div>
+      {/* <div>
         <button className="bg-green-300 rounded-xl shadow-lg p-4 mb-4">
           1-10
         </button>
@@ -29,7 +33,8 @@ const Questionnaire = () => {
         <button className="bg-green-300 rounded-xl shadow-lg p-4 mb-4">
           50&gt;
         </button>
-      </div>
+      </div> */}
+
       <div className="flex flex-col">
         <img src="/next.png" className="w-20 h-20" />
       </div>
