@@ -6,7 +6,7 @@ const Questionnaire = () => {
 async () => {
       const response = await fetch('/api/Questionnaire');
       const data = await response.json();
-      
+      console.log(data)
   }
   return (
     <div className="flex flex-col text-center items-center">
