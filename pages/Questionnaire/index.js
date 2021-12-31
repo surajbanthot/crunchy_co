@@ -1,17 +1,21 @@
 import React from "react";
 import { useState, useEffect } from "react";
+
 const Questionnaire = () => {
   const [value, setValue] = useState("");
 
-async () => {
-      const response = await fetch('/api/Questionnaire');
-      const data = await response.json();
-      console.log(data)
-  }
+  useEffect(async () => {
+    const response = await fetch("/api/Questions");
+    console.log(response);
+    const data = await response.json();
+    setValue(data);
+  }, []);
+  
   return (
     <div className="flex flex-col text-center items-center">
       <div className="font-bold mt-12 p-4 text-3xl">
         Help us know you Better
+        {value}
       </div>
       <div className="p-4 font-semibold text-2xl m-8 "></div>
       {/* <div>
@@ -35,13 +39,22 @@ async () => {
         </button>
       </div> */}
 
-      <div className="flex flex-col">
-        <img src="/next.png" className="w-20 h-20" />
+      <div className="flex">
+        <button >
+          <img
+            src="/previous.png"
+            className="w-20 h-20 hover:shadow-xl border-1 rounded-full"
+          />
+        </button>
+        <button>
+          <img
+            src="/next.png"
+            className="w-20 h-20 hover:shadow-xl border-1 rounded-full"
+          />
+        </button>
       </div>
     </div>
   );
 };
 
 export default Questionnaire;
-
-

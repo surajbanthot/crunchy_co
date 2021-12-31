@@ -1,4 +1,4 @@
-export default Questionnaire = [
+export default Questions = [
   {
     questions: [
       {
