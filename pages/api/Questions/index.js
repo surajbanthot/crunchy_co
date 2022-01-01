@@ -1,5 +1,5 @@
-import {Questions} from "../../../data/Questions"
+import {questions} from "../../../data/questions"
 
 export default function handler(req, res){
-    res.status(200).json(Questions)
+    res.status(200).json(questions)
 }
