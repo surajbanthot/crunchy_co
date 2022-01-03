@@ -1,35 +1,23 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const Questionnaire = () => {
-  const [question, setQuestion]=useState({});
-  const [answer, setAnswer] = useState([]);
+
+
   useEffect(async () => {
-    const response = await fetch("/api/questions");
+    const quest_arr = []; //array of all the questions
+    const quest_ans = []; //array of all the answers for the question
+    const response = await fetch("/api/Questions");
     const data = await response.json();
-    // console.log(data.questions)
-    data.questions.map(quest_ans=>{
-      
-      //------//
-      //question and answers in whole are pulled as quest_ans;
-      //-----//
-      
-      //individual questions in quest_ans.question
-      console.log(quest_ans.question);
-      setQuestion(quest_ans.question)
-
-      //all the individaul answers pulled by mapping
-      
-      quest_ans.answers.map((ans_opt) => {
-        // console.log(ans_opt);
-      });
-    })
+    data.map((quest_and_ans) => {
+      quest_arr.push(quest_and_ans.questionText);
+    
+    });
   }, []);
-
   return (
     <div className="flex flex-col text-center items-center">
       <div className="font-bold mt-12 p-4 text-3xl">
-        Help us know you Better {question}
+        Help us know you better
       </div>
       <div className="p-4 font-semibold text-2xl m-8 "></div>
       {/* <div>
@@ -69,6 +57,11 @@ const Questionnaire = () => {
       </div>
     </div>
   );
-};
+};;
 
 export default Questionnaire;
+
+
+//  quest_and_ans.answers.map((ans_opt) => {
+//    quest_ans.push(ans_opt);
+//  });
