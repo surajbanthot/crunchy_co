@@ -1,16 +1,17 @@
 import React from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const Questionnaire = () => {
-
+  const [currentQuestion, setQuestion] = useState(0)
 
   useEffect(async () => {
     const quest_arr = []; //array of all the questions
     const quest_ans = []; //array of all the answers for the question
+  const [question, setQuestion] = useState("");
     const response = await fetch("/api/Questions");
     const data = await response.json();
     data.map((quest_and_ans) => {
-      quest_arr.push(quest_and_ans.questionText);
+     setQuestion(quest_and_ans.questionText);
     
     });
   }, []);
@@ -19,7 +20,9 @@ const Questionnaire = () => {
       <div className="font-bold mt-12 p-4 text-3xl">
         Help us know you better
       </div>
-      <div className="p-4 font-semibold text-2xl m-8 "></div>
+      <div className="p-4 font-semibold text-2xl m-8 ">
+
+      </div>
       {/* <div>
         <button className="bg-green-300 rounded-xl shadow-lg p-4 mb-4">
           1-10
