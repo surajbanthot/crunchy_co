@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Answer from "../../components/Answer";
 import Question from "../../components/Question";
 
@@ -12,7 +13,7 @@ const Questionnaire = ({ questions }) => {
         </div>
         {questions.map((question_and_options) => {
           return (
-            <div>
+            <div key={question_and_options}>
               <Question question={question_and_options.questionText} />
               <Answer answer={question_and_options.answerOptions} />
             </div>
@@ -20,15 +21,17 @@ const Questionnaire = ({ questions }) => {
         })}
         <div className="flex">
           <button>
-            <img
+            <Image
+            alt="previous image"
               src="/previous.png"
-              className="w-20 h-20 hover:shadow-xl border-1 rounded-full"
+              className="w-20 h-20 hover:shadow-xl border-1 rounded-full" width="80" height="80"
             />
           </button>
           <button>
-            <img
+            <Image
+            alt="Next image"
               src="/next.png"
-              className="w-20 h-20 hover:shadow-xl border-1 rounded-full"
+              className="hover:shadow-md border-2 rounded-full" width="90" height="90"
             />
           </button>
         </div>

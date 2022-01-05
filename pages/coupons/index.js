@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 
-const Coupon = () => {
-  const [coupon, setcoupon] = useState("");
-  useEffect(async () => {
-    const response = await fetch("/api/coupon");
-    const data = await response.json();
-    setcoupon(data);
-  }, []);
-  return <>{coupon}</>;
+const Coupon = ({coupon_code}) => {
+  return <>{coupon_code}</>;
 };
 
 export default Coupon;
+
+export async function getStaticProps() {
+  const response = await fetch("http://localhost:3000/api/coupon");
+  const data = await response.json();
+  return {
+    props: {
+      coupon_code: data,
+    },
+  };
+}
