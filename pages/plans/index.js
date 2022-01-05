@@ -28,7 +28,7 @@ const Plans = () => {
               in amet ut proident duis aliqua ipsum. Incididunt culpa anim duis
               elit amet occaecat excepteur enim excepteur nulla.
             </div>
-            <button className="bg-green-300 border-1 p-4 rounded-xl shadow-lg">
+            <button className="bg-gray-300 border-1 p-4 rounded-xl shadow-lg">
               Get the Box
             </button>
           </div>
@@ -41,7 +41,7 @@ const Plans = () => {
                 amet in amet ut proident duis aliqua ipsum. Incididunt culpa
                 anim duis elit amet occaecat excepteur enim excepteur nulla.
               </div>
-              <button className="bg-green-300 border-1 p-4 rounded-xl shadow-lg">
+              <button className="bg-gray-300 border-1 p-4 rounded-xl shadow-lg">
                 Get the Box
               </button>
             </div>
