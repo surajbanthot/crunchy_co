@@ -5,15 +5,16 @@ import Question from "../../components/Question";
 
 const Questionnaire = ({ questions }) => {
   const question_data = [...questions];
-  const [count , setCount] = useState(0);
+  const [count , setCount] = useState(1);
   const [question, setQuestion] = useState(question_data[0]);
   const [showFinished, setShowFinished] = useState(false);
 
   const nextQuestion = () => {
     // console.log("next Button check");
-    if (count <= 6) {
-      setCount(prevcount=>prevcount+1);
+    // console.log(count)
+    if (count < 6) {
       setQuestion({ ...question_data[count] });
+      setCount(prevcount=>prevcount+1);
       // console.log(count)
     } else {
       setShowFinished(true);
@@ -44,7 +45,7 @@ const Questionnaire = ({ questions }) => {
         {showFinished ? (
           <div>Thanks for the info we will curate a snacks package for you</div>
         ) : (
-          <div>
+          <div className="">
             <Question question={question.question.text} />
             <Answer answer={question.options} />
           </div>
