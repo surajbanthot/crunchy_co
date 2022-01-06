@@ -5,7 +5,7 @@ import Question from "../../components/Question";
 
 const Questionnaire = ({ questions }) => {
   const question_data = [...questions];
-  const [count , setCount] = useState(1);
+  const [count, setCount] = useState(1);
   const [question, setQuestion] = useState(question_data[0]);
   const [showFinished, setShowFinished] = useState(false);
 
@@ -14,27 +14,12 @@ const Questionnaire = ({ questions }) => {
     // console.log(count)
     if (count < 6) {
       setQuestion({ ...question_data[count] });
-      setCount(prevcount=>prevcount+1);
+      setCount((prevcount) => prevcount + 1);
       // console.log(count)
     } else {
       setShowFinished(true);
     }
   };
-
-  // const prevQuestion = () => {
-  //   if(count<=0) count = question_data.length;
-  //   count--;
-  //   console.log(count);
-  //   setQuestion({ ...question_data[count] });
-  //   // console.log(count);
-  //   // if (count > 0) {
-  //   //   setCount((prevCount) => prevCount - 1);
-  //   // } else {
-  //   //   setCount(0);
-  //   //   alert("this is the beginning of the questionnaire");
-  //   // }
-  //   // setQuestion({ ...question_data[count] });
-  // };
 
   return (
     <>
@@ -43,34 +28,22 @@ const Questionnaire = ({ questions }) => {
           Help us know you better
         </div>
         {showFinished ? (
-          <div>Thanks for the info we will curate a snacks package for you</div>
+          <div>Thanks for the info we are curating snacks package for you</div>
         ) : (
-          <div className="">
+          <div>
             <Question question={question.question.text} />
             <Answer answer={question.options} />
+            <button onClick={nextQuestion}>
+              <Image
+                alt="Next image"
+                src="/next.png"
+                className="hover:shadow-md border-2 rounded-full"
+                width="90"
+                height="90"
+              />
+            </button>
           </div>
         )}
-
-        <div className="flex">
-          {/* <button onClick={prevQuestion}>
-            <Image
-              alt="previous image"
-              src="/previous.png"
-              className="w-20 h-20 hover:shadow-xl border-1 rounded-full"
-              width="80"
-              height="80"
-            />
-          </button> */}
-          <button onClick={nextQuestion}>
-            <Image
-              alt="Next image"
-              src="/next.png"
-              className="hover:shadow-md border-2 rounded-full"
-              width="90"
-              height="90"
-            />
-          </button>
-        </div>
       </div>
     </>
   );
@@ -91,3 +64,29 @@ export async function getStaticProps() {
   };
 }
 
+{
+  /* <button onClick={prevQuestion}>
+            <Image
+              alt="previous image"
+              src="/previous.png"
+              className="w-20 h-20 hover:shadow-xl border-1 rounded-full"
+              width="80"
+              height="80"
+            />
+          </button> */
+}
+
+// const prevQuestion = () => {
+//   if(count<=0) count = question_data.length;
+//   count--;
+//   console.log(count);
+//   setQuestion({ ...question_data[count] });
+//   // console.log(count);
+//   // if (count > 0) {
+//   //   setCount((prevCount) => prevCount - 1);
+//   // } else {
+//   //   setCount(0);
+//   //   alert("this is the beginning of the questionnaire");
+//   // }
+//   // setQuestion({ ...question_data[count] });
+// };
