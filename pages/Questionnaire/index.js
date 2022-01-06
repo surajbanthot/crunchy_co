@@ -5,30 +5,36 @@ import Question from "../../components/Question";
 
 const Questionnaire = ({ questions }) => {
   const question_data = [...questions];
-  const [count, setCount] = useState(0);
-  const [question, setQuestion] = useState(question_data[count]);
+  const [count , setCount] = useState(0);
+  const [question, setQuestion] = useState(question_data[0]);
   const [showFinished, setShowFinished] = useState(false);
+
   const nextQuestion = () => {
     // console.log("next Button check");
-    setQuestion({ ...question_data[count] });
     if (count <= 6) {
-      setCount((prevCount) => prevCount + 1);
-      console.log(count);
-      // console.log(question.question.text);
+      setCount(prevcount=>prevcount+1);
+      setQuestion({ ...question_data[count] });
+      // console.log(count)
     } else {
       setShowFinished(true);
     }
   };
-  const prevQuestion = () => {
-    // console.log("Previous Button Check");
-    setQuestion({ ...question_data[count] });
-    if (count >= 0) {
-      setCount((prevCount) => prevCount - 1);
-      console.log(count);
-    } else {
-      setShowFinished(true);
-    }
-  };
+
+  // const prevQuestion = () => {
+  //   if(count<=0) count = question_data.length;
+  //   count--;
+  //   console.log(count);
+  //   setQuestion({ ...question_data[count] });
+  //   // console.log(count);
+  //   // if (count > 0) {
+  //   //   setCount((prevCount) => prevCount - 1);
+  //   // } else {
+  //   //   setCount(0);
+  //   //   alert("this is the beginning of the questionnaire");
+  //   // }
+  //   // setQuestion({ ...question_data[count] });
+  // };
+
   return (
     <>
       <div className="flex flex-col text-center items-center">
@@ -45,7 +51,7 @@ const Questionnaire = ({ questions }) => {
         )}
 
         <div className="flex">
-          <button onClick={prevQuestion}>
+          {/* <button onClick={prevQuestion}>
             <Image
               alt="previous image"
               src="/previous.png"
@@ -53,7 +59,7 @@ const Questionnaire = ({ questions }) => {
               width="80"
               height="80"
             />
-          </button>
+          </button> */}
           <button onClick={nextQuestion}>
             <Image
               alt="Next image"
@@ -84,13 +90,3 @@ export async function getStaticProps() {
   };
 }
 
-{
-  /* {questions.map((data) => {
-          return (
-            <div key={data.question.id}>
-              <Question question={data.question.text} />
-              <Answer answer={data.options} />
-            </div>
-          );
-        })} */
-}
