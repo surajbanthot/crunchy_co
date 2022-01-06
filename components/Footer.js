@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Link } from "next/link";
 const Footer = () => {
   return (
-    <div className="w-full h-20 static bottom-0">
+    <div className="w-full h-20 bottom-10">
       <footer className="">
         <div className="grid grid-cols-3 text-gray-500 font-semibold p-5">
           <div>
@@ -21,10 +21,10 @@ const Footer = () => {
             </ul>
           </div>
           <div className="grid grid-cols-4 p-1 mx-2 opacity-15 pt-5 pr-5">
-            <img src="/instagram.png" alt="instagram" className="h-10 w-10" width="10" height="10"></img>
-            <img src="/facebook.png" alt="facebook" className="h-10 w-10" layout="fill"></img>
-            <img src="/twitter.png" alt="twitter" className="h-10 w-10" layout="fill"></img>
-            <img src="/youtube.png" alt="youtube" className="h-10 w-10" layout="fill"></img>
+            <img src="/instagram.png" alt="instagram" className="h-10 w-10"></img>
+            <img src="/facebook.png" alt="facebook" className="h-10 w-10"></img>
+            <img src="/twitter.png" alt="twitter" className="h-10 w-10"></img>
+            <img src="/youtube.png" alt="" className="h-10 w-10"></img>
           </div>
         </div>
       </footer>

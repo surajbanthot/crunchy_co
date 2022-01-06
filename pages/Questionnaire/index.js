@@ -19,6 +19,21 @@ const Questionnaire = ({ questions }) => {
     } else {
       setShowFinished(true);
     }
+
+    // const response = await fetch(
+    //   "https://crunchy-co-f142c-default-rtdb.firebaseio.com/",
+    //   {
+    //     method: 'POST',
+    //     body: JSON.stringify(question.question.text),
+    //     header: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   }
+    // );
+    // console.log(question.question.text);
+    // const data = await response.json();
+    // console.log(data)
+
   };
 
   return (
