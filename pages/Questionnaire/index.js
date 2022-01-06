@@ -28,7 +28,20 @@ const Questionnaire = ({ questions }) => {
           Help us know you better
         </div>
         {showFinished ? (
-          <div>Thanks for the info we are curating snacks package for you</div>
+          <div className="flex flex-col text-center items-center">
+            <div className="m-8">
+              Thanks for the info we are curating snacks package for you
+            </div>
+            <div className="shadow-xl w-40 h-40 rounded-full m-8">
+              <Image
+                className="rounded-full"
+                alt="cooking gif"
+                src="/Cooking.gif"
+                width="160"
+                height="160"
+              />
+            </div>
+          </div>
         ) : (
           <div>
             <Question question={question.question.text} />
