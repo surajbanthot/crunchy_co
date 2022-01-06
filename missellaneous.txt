@@ -1,0 +1,23 @@
+ // const [quest, setQuest] = useState({
+  //   question: { id: 1, text: "How big is your Organisation?" },
+  //   type: "check",
+  //   options: {
+  //     id: 1,
+  //     text: [
+  //       { option: "1-10", active: false },
+  //       { option: "10-25", active: false },
+  //       { option: "25-50", active: false },
+  //       { option: "50>", active: false },
+  //     ],
+  //   },
+  // });
+
+  // useEffect(()=>{
+  // questions.map((data) => {
+  //   setQuest({ ...quest }, data);
+  // });
+  // // quest.options.text.map(data=>{
+  // //   console.log(data);
+  // // })
+  // console.log(questions.length);
+  // }, [])

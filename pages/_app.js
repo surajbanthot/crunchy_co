@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { SessionProvider } from "next-auth/react";
 
+
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <>
